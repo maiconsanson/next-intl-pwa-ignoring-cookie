@@ -1,0 +1,16 @@
+{
+  "homepage": {
+    "title": "Página inicial",
+    "link": {
+      "locale": "en",
+      "text": "Change to English"
+    }
+  },
+  "another_page": {
+    "title": "Outra página",
+    "link": {
+      "locale": "en",
+      "text": "Voltar para a Home"
+    }
+  }
+}

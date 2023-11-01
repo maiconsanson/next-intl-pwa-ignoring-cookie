@@ -1,8 +1,24 @@
 /** @type {import('next').NextConfig} */
 
-const withNextIntl = require("next-intl/plugin")("./src/messages/i18n.js");
 const withPWA = require("@ducanh2912/next-pwa").default({
   dest: "public",
+  disable: process.env.NODE_ENV === "development",
+  register: true,
+  skipWaiting: true,
 });
 
-module.exports = withPWA(withNextIntl({}));
+const withNextIntl = require("next-intl/plugin")("./src/i18n");
+
+const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/another",
+        permanent: false,
+      },
+    ];
+  },
+};
+
+module.exports = withPWA(withNextIntl(nextConfig));

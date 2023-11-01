@@ -1,9 +1,10 @@
 import { useTranslations } from "next-intl";
-import Link from "next-intl/link";
+import Link from "@/app/components/Link";
 import styles from "../page.module.css";
 
 export default function Home({ params }) {
-  const t = useTranslations("index");
+  const t = useTranslations("homepage");
+  const tAnother = useTranslations("another_page");
   const { locale } = params;
 
   return (
@@ -13,8 +14,12 @@ export default function Home({ params }) {
         <em>locale: {locale}</em>
       </p>
       <br />
-      <Link href="/" locale={t("link.locale")}>
+      <Link href="/" locale={t("link.locale")} prefetch={false}>
         {t("link.text")}
+      </Link>
+      <br />
+      <Link href="/another" locale={t("link.locale")} prefetch={false}>
+        {tAnother("title")}
       </Link>
     </main>
   );
