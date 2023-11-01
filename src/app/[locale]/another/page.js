@@ -18,9 +18,7 @@ export default function Another({ params }) {
         {tHome("link.text")}
       </Link>
       <br />
-      <Link href="/" locale={t("link.locale")}>
-        {t("link.text")}
-      </Link>
+      <Link href="/">{t("link.text")}</Link>
     </main>
   );
 }
