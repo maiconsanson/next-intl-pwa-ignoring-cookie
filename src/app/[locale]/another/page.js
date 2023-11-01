@@ -14,11 +14,11 @@ export default function Another({ params }) {
         <em>locale: {locale}</em>
       </p>
       <br />
-      <Link href="/another" locale={t("link.locale")} prefetch={false}>
+      <Link href="/another" locale={t("link.locale")}>
         {tHome("link.text")}
       </Link>
       <br />
-      <Link href="/" locale={t("link.locale")} prefetch={false}>
+      <Link href="/" locale={t("link.locale")}>
         {t("link.text")}
       </Link>
     </main>
