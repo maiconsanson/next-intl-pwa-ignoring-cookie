@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-// import { Link } from "@/i18n/navigation";
 import Link from "@/app/components/Link";
 import styles from "@/app/page.module.css";
 
